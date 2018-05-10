@@ -6,9 +6,9 @@
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
-  -moz-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: boder-box;
+  box-sizing:         border-box;
 }
 
 // universal
@@ -133,7 +133,8 @@ aside {
       font-size: 1.4em;
       text-align: left;
       letter-spacing: -1px;
-      margin-top:0px;
+      margin-bottom: 3px;
+      margin-top: 0px;
     }
   }
 }
@@ -145,6 +146,44 @@ aside {
 
 .gravatar_edit {
   margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
 }
 
 // forms
@@ -247,3 +286,4 @@ span.picture {
     border: 0;
   }
 }
+
